@@ -1,7 +1,7 @@
 <?php
 	
 	//TODO : Mettre le bon fichier de database ici selon le projet
-	define('DATABASE_FILE', 'test.accdb');
+	define('DATABASE_FILE', 'GameOnTP4.accdb');
 	
 	
 	$dbName =  dirname(__FILE__)."\\".DATABASE_FILE;
