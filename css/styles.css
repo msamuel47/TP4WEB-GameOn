@@ -218,3 +218,11 @@
 .clear {
     clear: both;
 }
+.footertext{
+    font-family: 'Oxygen', sans-serif;
+    color: white;
+    font-size: 12pt;
+    margin-top: 30px;
+    margin-right: 15px;
+    float: right;
+}

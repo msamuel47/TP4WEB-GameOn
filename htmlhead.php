@@ -4,7 +4,7 @@ function MakeHTMLHead(){
     include "data/connexionBD.php";
     echo'<head>
 	<meta charset="UTF-8">
-	<title>MLG tournament</title>
+	<title>GameOn Website</title>
 	<link rel="stylesheet" href="CSS/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
