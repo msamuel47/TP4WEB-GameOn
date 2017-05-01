@@ -1,7 +1,7 @@
 <?php
 // Fonction qui permet l'affichage de la tete html
 function MakeHTMLHead(){
-    include "data/connexionBD.php";
+
     echo'<head>
 	<meta charset="UTF-8">
 	<title>GameOn Website</title>

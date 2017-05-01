@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "data/connexionBD.php";
+include_once "data/connexionBD.php";
 if (!empty($_POST['username']) && !empty($_POST['mdp'])) {
 
     $user = $_POST['username'];
