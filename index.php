@@ -5,6 +5,7 @@
 include "entete.php";
 include "pieddepage.php";
 include "htmlhead.php";
+include "data/connexionBD.php";
 MakeHTMLHead();
 ?>
 
@@ -27,9 +28,38 @@ MakeHTMLHead();
             possible.</p>
         </br>
             <p class="textright">Nous offrons sur ce site, une variété de jeu extraordinaire.</p>
+            <div id="gamelistingform">
+
+                <form id ='thisForm' action='index.php' method="get">
+
+                    <label for="genre">Genre : </label>
+                    <select name="genre" onchange="this.form.submit()" onload="this.form.submit()">
+
+                        <?php
+                        //Listage des catégories
+                        try{
+                            $results = $db->query('SELECT * FROM TypeJeu WHERE TRUE');
+                            $results->setFetchMode(PDO::FETCH_OBJ);
+
+                            echo'<option value="---">--Veuillez Choisir--</option>
+                                 <option value="0">Tous</option>';
+                            while ($ligne = $results->fetch()){
+                                echo '<option value="'.$ligne->IdGenre.'">'.$ligne->Genre.'</option>';
+                            }
+                        }
+                        catch(PDOException $exec){
+
+
+                        }
+                        ?>
+                    </select>
+
+
+                </form>
+            </div>
+
             <div id="gametable">
                 <?php
-                include "data/connexionBD.php";
                 include 'requestAllGame.php';
                 ?>
 
